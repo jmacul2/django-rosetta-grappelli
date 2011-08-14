@@ -5,7 +5,14 @@
 
 {% block content_subtitle %}: {% trans "Language selection" %}{% endblock %}
 
-{% block breadcumbs %}<a href="{% url rosetta-pick-file %}">{% trans "Home" %}</a> &rsaquo; {% trans "Language selection" %}{% endblock %}
+{% block breadcrumbs %}
+    <div id="breadcrumbs">
+        <a href="/admin/">{% trans "Home" %}</a> &rsaquo;
+        <a href="{% url rosetta-pick-file %}">Rosetta</a> &rsaquo;
+        {% trans "Language selection" %}
+    </div>
+{% endblock %}
+
 
 {% block bodyclass %}filebrowser{% endblock %}
 {% block content-class %}change-list content-flexible{% endblock %}
