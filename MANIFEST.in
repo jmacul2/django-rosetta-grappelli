@@ -1,0 +1,4 @@
+include LICENSE README.md AUTHORS
+recursive-include rosetta-grappelli/templates/rosetta *.html
+recursive-include rosetta-grappelli/templates/css *.css
+recursive-include rosetta-grappelli/templates/js *.js
