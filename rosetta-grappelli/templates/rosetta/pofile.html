@@ -6,6 +6,7 @@
 {% block content_subtitle %} / {{MESSAGES_SOURCE_LANGUAGE_NAME}} {% blocktrans  %}to {{rosetta_i18n_lang_name}}{% endblocktrans %}{% endblock %}
 
 {% block extrahead %}
+{{ block.super }}
 <script type="text/javascript" charset="utf-8">
     (function($) {
         $(document).ready(function() {
@@ -17,6 +18,7 @@
 {% endblock %}
 
 {% block extrastyle %}
+{{ block.super }}
 {# Dirty hack because rosetta uses messages for the object list instead of object_list ... argh. #}
 <style>
 .messagelist { display: none; }
