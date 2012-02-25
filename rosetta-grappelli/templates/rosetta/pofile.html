@@ -120,7 +120,7 @@
 <form method="post" action="" id="changelist-form">
     <div style="display: none;">{% rosetta_csrf_token %}</div>
     <div class="container-full" id="changelist">
-        {% if messages %}
+        {% if rosetta_messages %}
         <div class="module changelist-results{% if rosetta_i18n_lang_bidi %} rtl{% endif %}">
             <table cellspacing="0">
                 <thead>
@@ -137,7 +137,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {% for message in messages %}
+                    {% for message in rosetta_messages %}
                     <tr class="{% cycle row1,row2%}">
                         {% if message.msgid_plural %}
                         <td class="original plural">
